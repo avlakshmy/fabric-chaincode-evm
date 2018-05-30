@@ -65,7 +65,19 @@ var _ = Describe("Evmscc", func() {
 		It("returns an OK response", func() {
 			res := evmscc.Init(stub)
 			Expect(res.Status).To(Equal(int32(shim.OK)))
+<<<<<<< HEAD
 			Expect(res.Payload).To(Equal([]byte(nil))) 
+=======
+<<<<<<< HEAD
+			Expect(res.Payload).To(Equal([]byte(nil))) 
+=======
+<<<<<<< HEAD
+			Expect(res.Payload).To(Equal([]byte(nil))) 
+=======
+			Expect(res.Payload).To(Equal([]byte(nil))) //added this
+>>>>>>> 2fcaf77bb89ad9472b3800a74b588eeb7743e2c5
+>>>>>>> 509bfe38c20a5f5fb76f11779f56fbed972b608a
+>>>>>>> bbbdd8921894324b3609f0e7b3853af7c45ca09c
 		})
 	})
 
@@ -398,6 +410,15 @@ AiEA0GxTPOXVHo0gJpMbHc9B73TL5ZfDhujoDyjb8DToWPQ=
 				proposals       = "013cf08b"
 				vote            = "0121b93f"
 				winnerName      = "e2ba53f0"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+				voters          = "a3ec138d"
+
+				//I added:
+>>>>>>> 509bfe38c20a5f5fb76f11779f56fbed972b608a
+>>>>>>> bbbdd8921894324b3609f0e7b3853af7c45ca09c
 				voters          = "a3ec138d"
 
 				user1Cert = `-----BEGIN CERTIFICATE-----
@@ -523,7 +544,19 @@ H8GZeN2ifTyJzzGo
 						baseCallCount = stub.PutStateCallCount()
 						Expect(res.Status).To(Equal(int32(shim.OK)))
 						Expect(stub.PutStateCallCount()).To(Equal(baseCallCount), "require(!sender.voted) should fail, therefore NO write should be performed")
+<<<<<<< HEAD
 					}
+=======
+<<<<<<< HEAD
+					}
+=======
+<<<<<<< HEAD
+					}
+=======
+					}) //doubt
+>>>>>>> 2fcaf77bb89ad9472b3800a74b588eeb7743e2c5
+>>>>>>> 509bfe38c20a5f5fb76f11779f56fbed972b608a
+>>>>>>> bbbdd8921894324b3609f0e7b3853af7c45ca09c
 
 					It("does not increment vote count of proposal 'a'", func() {
 						stub.GetArgsReturns([][]byte{[]byte(contractAddress.String()), []byte(proposals + "0000000000000000000000000000000000000000000000000000000000000000")})
